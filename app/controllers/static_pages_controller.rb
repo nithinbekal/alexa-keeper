@@ -10,10 +10,13 @@ class StaticPagesController < ApplicationController
       @collection = Collection.new
       @collection_names = current_user.collections
       @collect = Collection.new
+      @descript = session[:descript]
+            
     end
   end
 
    def show
+
     web = current_user.websites
     if params[:collection_id].present?
       web = current_user.collections.find_by_id(params[:collection_id]).try(:websites)
@@ -25,6 +28,7 @@ class StaticPagesController < ApplicationController
       format.html
       format.json { render json: @alexa_rank_json}
     end
+  
   end
 
   def destroy

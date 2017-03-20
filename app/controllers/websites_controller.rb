@@ -1,7 +1,7 @@
 class WebsitesController < ApplicationController
   def create
-    Websites::Create.call(params, current_user)
-    redirect_to root_url
+   @descript = Websites::Create.call(params, current_user)
+   redirect_to root_url
   end
 
   def show
@@ -10,6 +10,8 @@ class WebsitesController < ApplicationController
     respond_to do |format|
       format.js
     end
+
+
   end
 
   def destroy

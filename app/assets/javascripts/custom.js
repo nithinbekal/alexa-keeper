@@ -19,12 +19,10 @@ $(document).ready(function() {
       },
             title: {
                 text: 'Alexa Keeper',
-                x: -20 //center
+                x: -60 //center
             },
-            subtitle: {
-                text: 'Source: alexa.com',
-                x: -20
-            },
+
+          
             xAxis: {
                 categories: data[0]['date'],
                 min: 0
@@ -145,12 +143,9 @@ function render_graph(data){
          },
          title: {
              text: 'Alexa Keeper',
-             x: -20 //center
+             x: -60 //center
          },
-         subtitle: {
-             text: 'Source: alexa.com',
-             x: -20
-         },
+       
          xAxis: {
              categories: data[0]['date'],
              min: 0

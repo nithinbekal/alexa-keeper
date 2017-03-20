@@ -7,7 +7,6 @@ module Websites
     def initialize(params, user)
       @params = params
       @user = user
-      
     end
 
     def call
@@ -16,7 +15,7 @@ module Websites
       find_or_create_user
     end
 
-     private
+    private
 
     attr_reader :params, :user, :website
 
@@ -35,6 +34,7 @@ module Websites
     def find_or_create_user
       site_urls = user.websites.map(&:url)
       websites_count = user.websites.count
+   
       user.update(sites: site_urls, site_number: websites_count)
     end
 

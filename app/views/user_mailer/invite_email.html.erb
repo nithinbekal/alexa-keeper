@@ -4,7 +4,7 @@
     </h1>
 <p>
     We are priviledged to give you an Invite to Beta Test Rank Hub, just follow the link below:
-    <%= url_for :controller => 'invites', :action => 'index', :hash=> @invite.hash ,:token => @str, :only_path => false, :host => 'https://rankhub-staging.herokuapp.com' %>
+    <%= url_for :controller => 'invites', :action => 'index', :hash=> @invite.hash ,:token => @str, :only_path => false, :host => 'localhost:3000' %>
         <h3>
     <%= @invite.name%>
   </h3>

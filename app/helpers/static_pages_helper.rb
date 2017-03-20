@@ -6,6 +6,7 @@ module StaticPagesHelper
             ranks = []
             data  = []
             category = []
+            
             site.fetch_last_10_days_rank.each do |rank|
                 create_data = {}
                 category << rank.created_at.strftime('%Y-%m-%d')

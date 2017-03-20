@@ -1,3 +1,7 @@
+
+
+
+
 <div class="modal fade" id="demo1" role="dialog" aria-hidden="true">
   <div class="modal-dialog modal-sm">
     <div class="modal-content">
@@ -50,12 +54,13 @@
                                     <%= form_for (@website) do |f| %>
                                       <div class="col-md-9">
                                         
-                                           <%= f.text_field :url,class:'form-control',placeholder:"Add Domain" %>
+                                           <%= f.text_field :url, id:'url_id', class:'form-control',placeholder:"Add Domain" %>
                           <%= f.hidden_field :collection_id, value: collect.id%>
                           <%= f.hidden_field :current_user, value: current_user.id%>
+
                                       </div>
                                       <div class="col-md-3">
-                                        <%= f.submit "Add", class: 'btn btn-success btn-sm btn pull-right' %>
+                                        <%= f.submit "Add", class: ' btn btn-success btn-sm btn pull-right'%>
                                       </div>
                                       <% end %>
                                         <%= render partial: "domain", locals: { collect: collect } %>

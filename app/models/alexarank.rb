@@ -11,5 +11,7 @@ class Alexarank < ApplicationRecord
               .split
               .first
     rank.to_i
+  
+
   end
 end
